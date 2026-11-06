@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura Coffee & Roastery — Artisanal Coffee Experience</title>
+  <meta name="description" content="Nikmati kopi artisan specialty nusantara dengan suasana modern, estetik, dan menenangkan di Aura Coffee.">
+  
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Notification Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-content">
+      <div class="status-indicator">
+        <span class="pulse-dot" id="liveDot"></span>
+        <span id="liveStatusText">Memeriksa jam operasional...</span>
+      </div>
+      <div class="top-promo">
+        <span class="badge-pill">Promo Hari Ini</span>
+        <span>Diskon 20% untuk First Dine-In dengan kode: <strong>AURACOFFEE</strong></span>
+      </div>
+      <div class="top-hours">
+        <span>Buka Setiap Hari: 08.00 - 23.00 WIB</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar-container">
+      <a href="#hero" class="brand-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8h1a4 4 0 0 1 0 8h-1"></path>
+            <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
+            <line x1="6" y1="1" x2="6" y2="4"></line>
+            <line x1="10" y1="1" x2="10" y2="4"></line>
+            <line x1="14" y1="1" x2="14" y2="4"></line>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">AURA</span>
+          <span class="brand-tag">COFFEE ROASTERS</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-menu" id="navMenu">
+        <a href="#hero" class="nav-link active">Beranda</a>
+        <a href="#about" class="nav-link">Tentang</a>
+        <a href="#menu" class="nav-link">Menu Kopi</a>
+        <a href="#recommender" class="nav-link">Rekomendasi</a>
+        <a href="#experience" class="nav-link">Ruang</a>
+        <a href="#location" class="nav-link">Lokasi</a>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <!-- Theme Toggle -->
+        <button class="icon-btn theme-toggle" id="themeToggle" aria-label="Ganti Tema">
+          <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Cart Trigger Button -->
+        <button class="cart-trigger-btn" id="openCartBtn" aria-label="Keranjang Pesanan">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="9" cy="21" r="1"></circle>
+            <circle cx="20" cy="21" r="1"></circle>
+            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          </svg>
+          <span class="cart-counter" id="cartCountBadge">0</span>
+        </button>
+
+        <!-- Reservation CTA -->
+        <button class="btn btn-primary" id="openReserveBtn">
+          Reservasi Meja
+        </button>
+
+        <!-- Mobile Toggle Button -->
+        <button class="hamburger-btn" id="mobileMenuBtn" aria-label="Buka Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="hero-bg-glow hero-glow-1"></div>
+      <div class="hero-bg-glow hero-glow-2"></div>
+      
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-highlight">
+            <span class="badge-dot"></span>
+            100% Single Origin & Artisan Brew
+          </div>
+          <h1 class="hero-title">
+            Secangkir Ketenangan di Tengah <span class="gradient-text">Hiruk Pikuk Kota.</span>
+          </h1>
+          <p class="hero-description">
+            Eksplorasi cita rasa kopi murni nusantara dan dunia yang dipanggang dengan standar tinggi, diseduh oleh barista berpengalaman dalam atmosfer minimalis nan sejuk.
+          </p>
+          <div class="hero-buttons">
+            <a href="#menu" class="btn btn-primary btn-lg">
+              <span>Eksplor Menu</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <button class="btn btn-secondary btn-lg" id="heroReserveBtn">
+              Reservasi Tempat
+            </button>
+          </div>
+
+          <!-- Quick Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">4.9<small>★</small></span>
+              <span class="stat-label">Rating Pelanggan (2k+)</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">18+</span>
+              <span class="stat-label">Varian Biji Kopi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Organik & Fair Trade</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Visual Showcase -->
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <img 
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=900&q=80" 
+              alt="Secangkir Kopi Artisan Specialty Aura Coffee"
+              class="hero-img"
+              loading="eager"
+            >
+            <div class="hero-badge-floating floating-card-1">
+              <div class="floating-icon">☕</div>
+              <div class="floating-info">
+                <strong>Cold Brew Signature</strong>
+                <span>18 Jam Slow Drip • Ekstra Lembut</span>
+              </div>
+            </div>
+
+            <div class="hero-badge-floating floating-card-2">
+              <div class="status-chip">Favorit Pekan Ini</div>
+              <div class="floating-price">
+                <span>Rp 38.000</span>
+                <button class="quick-add-btn" onclick="addToCartById('sig-cold-brew')" title="Tambah langsung">
+                  +
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Values / Features -->
+    <section class="features-section" id="about">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">KENAPA AURA COFFEE</span>
+          <h2 class="section-title">Harmoni Rasa, Kualitas, & Ketenangan</h2>
+          <p class="section-subtitle">Kami mendedikasikan setiap detik proses seduh untuk menghadirkan pengalaman kopi yang bersih, berkarakter, dan berkesan.</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Biji Kopi Pilihan Bersertifikat</h3>
+            <p class="feature-text">Dipanen langsung dari petani kopi lokal di Gayo, Toraja, Kintamani, dan Kolombia dengan prinsip fair trade berkelanjutan.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 14 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="feature-title">Freshly Roasted Weekly</h3>
+            <p class="feature-text">Roasting profil presisi dilakukan setiap minggu di roastery in-house kami untuk menjaga aroma dan keasaman seimbang.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                <line x1="12" y1="20" x2="12.01" y2="20"></line>
+              </svg>
+            </div>
+            <h3 class="feature-title">Work & Chill Friendly</h3>
+            <p class="feature-text">Dilengkapi colokan di setiap meja, koneksi internet berkecepatan 150 Mbps, dan pencahayaan alami yang ramah mata.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+            </div>
+            <h3 class="feature-title">Barista Berdedikasi</h3>
+            <p class="feature-text">Barista berlisensi yang siap mendiskusikan profile rasa dan merekomendasikan metode seduh terbaik sesuai preferensi Anda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Taste Quiz / Finder -->
+    <section class="taste-section" id="recommender">
+      <div class="container">
+        <div class="taste-card">
+          <div class="taste-header">
+            <span class="section-badge">INTERACTIVE ASSISTANT</span>
+            <h2 class="taste-title">Bingung Mau Pesan Apa? Temukan Kopimu!</h2>
+            <p class="taste-desc">Pilih profil rasa yang sedang Anda inginkan, dan algoritma seduh kami akan merekomendasikan menu yang paling cocok.</p>
+          </div>
+
+          <div class="taste-options" id="tasteOptions">
+            <button class="taste-btn active" data-flavor="creamy">
+              <span class="taste-emoji">🥛</span>
+              <span class="taste-name">Creamy & Manis Lembut</span>
+            </button>
+            <button class="taste-btn" data-flavor="bold">
+              <span class="taste-emoji">⚡</span>
+              <span class="taste-name">Strong & Bold Pahit Pekat</span>
+            </button>
+            <button class="taste-btn" data-flavor="fruity">
+              <span class="taste-emoji">🍓</span>
+              <span class="taste-name">Fruity & Asam Segar V60</span>
+            </button>
+            <button class="taste-btn" data-flavor="refreshing">
+              <span class="taste-emoji">🧊</span>
+              <span class="taste-name">Dingin Segar Sparkling</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div class="taste-result" id="tasteResultBox">
+            <!-- Injected via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section" id="menu">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">CURATED SELECTION</span>
+          <h2 class="section-title">Daftar Menu Pilihan</h2>
+          <p class="section-subtitle">Diseduh dari biji kopi arabika pilihan dengan rasio ekstraksi yang presisi.</p>
+        </div>
+
+        <!-- Menu Filter Controls & Search -->
+        <div class="menu-controls">
+          <div class="filter-tabs" id="filterTabs">
+            <button class="tab-btn active" data-category="all">Semua Menu</button>
+            <button class="tab-btn" data-category="espresso">Espresso Based</button>
+            <button class="tab-btn" data-category="manual">Manual Brew</button>
+            <button class="tab-btn" data-category="signature">Signature Aura</button>
+            <button class="tab-btn" data-category="pastry">Pastry & Camilan</button>
+          </div>
+
+          <div class="menu-search-wrapper">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="menuSearchInput" placeholder="Cari nama kopi atau rasa..." autocomplete="off">
+            <button id="clearSearchBtn" class="clear-search-btn" style="display:none;">&times;</button>
+          </div>
+        </div>
+
+        <!-- Menu Items Grid -->
+        <div class="menu-grid" id="menuGrid">
+          <!-- Populated dynamically by script.js -->
+        </div>
+
+        <!-- Empty State for Search -->
+        <div class="empty-menu-state" id="emptyMenuState" style="display: none;">
+          <div class="empty-icon">☕</div>
+          <h3>Menu tidak ditemukan</h3>
+          <p>Coba kata kunci lain atau pilih kategori di atas.</p>
+          <button class="btn btn-secondary btn-sm" id="resetFilterBtn">Tampilkan Semua</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ambience & Space Experience -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <div class="experience-split">
+          <div class="experience-text">
+            <span class="section-badge">SUASANA RUANG</span>
+            <h2 class="section-title">Ruang Tenang untuk Fokus & Berbagi Cerita</h2>
+            <p>Dirancang dengan konsep estetika minimalis modern bernuansa palet biru dingin dan material natural. Setiap sudut Aura Coffee diciptakan untuk kenyamanan maksimal Anda.</p>
+            
+            <ul class="space-perks-list">
+              <li>
+                <div class="perk-icon">✓</div>
+                <div>
+                  <strong>Indoor Quiet Pods</strong>
+                  <p>Area hening bebas bising cocok untuk meeting virtual atau konsentrasi bekerja.</p>
+                </div>
+              </li>
+              <li>
+                <div class="perk-icon">✓</div>
+                <div>
+                  <strong>Outdoor Terrace Garden</strong>
+                  <p>Halaman terbuka berangin sejuk dengan tanaman tropis untuk ngobrol santai sore hari.</p>
+                </div>
+              </li>
+              <li>
+                <div class="perk-icon">✓</div>
+                <div>
+                  <strong>Slow Bar Experience</strong>
+                  <p>Duduk di depan bar interaktif dan nikmati diskusi seduhan langsung bersama roaster kami.</p>
+                </div>
+              </li>
+            </ul>
+
+            <button class="btn btn-primary" id="openReserveBtn2">Reservasi Meja Favorit</button>
+          </div>
+
+          <div class="experience-gallery">
+            <div class="gallery-col">
+              <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=600&q=80" alt="Interior Kafe Modern" class="gallery-img g-img-1">
+              <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=600&q=80" alt="Penyeduhan Kopi" class="gallery-img g-img-2">
+            </div>
+            <div class="gallery-col col-offset">
+              <img src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" alt="Espresso Machine" class="gallery-img g-img-3">
+              <img src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=600&q=80" alt="Pastry & Croissant" class="gallery-img g-img-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials / Social Proof -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header text-center">
+          <span class="section-badge">KATA MEREKA</span>
+          <h2 class="section-title">Cerita dari Komunitas Penikmat Kopi</h2>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"Blue Velvet Latte dan V60 Gayo-nya juara! Tempatnya sangat tenang, interior bernuansa biru modern bikin rileks banget buat ngerjain tugas seharian."</p>
+            <div class="review-author">
+              <div class="avatar-circle">DN</div>
+              <div>
+                <strong>Dimas Nugraha</strong>
+                <span>Product Designer</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"Sebagai pencinta manual brew, saya kagum sama konsistensi ekstraksinya. Baristanya ramah dan mengerti banget body note dari biji kopinya."</p>
+            <div class="review-author">
+              <div class="avatar-circle">SA</div>
+              <div>
+                <strong>Sarah Anggraini</strong>
+                <span>Coffee Enthusiast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <p class="review-quote">"Croissant butter-nya renyah luar biasa dipadu Americano dingin. Tempat outdoor-nya asri, wifi kencang tanpa kendala sama sekali!"</p>
+            <div class="review-author">
+              <div class="avatar-circle">RF</div>
+              <div>
+                <strong>Rizky Firmansyah</strong>
+                <span>Software Engineer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location & Opening Hours Section -->
+    <section class="location-section" id="location">
+      <div class="container">
+        <div class="location-card">
+          <div class="location-info">
+            <span class="section-badge">KUNJUNGI KAMI</span>
+            <h2 class="location-title">Aura Coffee Sanctuary</h2>
+            <p class="location-address">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Jl. Senopati Raya No. 42, Kebayoran Baru, Jakarta Selatan
+            </p>
+
+            <div class="schedule-box">
+              <div class="schedule-row">
+                <span>Senin — Jumat</span>
+                <strong>08.00 — 22.00 WIB</strong>
+              </div>
+              <div class="schedule-row">
+                <span>Sabtu — Minggu</span>
+                <strong>07.30 — 23.30 WIB</strong>
+              </div>
+              <div class="schedule-row highlight-row">
+                <span>Status Saat Ini</span>
+                <span class="badge-status-pill" id="scheduleStatusBadge">Memuat...</span>
+              </div>
+            </div>
+
+            <div class="location-actions">
+              <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="3 11 22 2 13 21 11 13 3 11"></polygon>
+                </svg>
+                Buka di Google Maps
+              </a>
+              <button class="btn btn-secondary" id="openReserveBtn3">
+                Booking Meja
+              </button>
+            </div>
+          </div>
+
+          <div class="location-map-visual">
+            <div class="map-card-interior">
+              <div class="map-pin-pulse">
+                <div class="map-pin"></div>
+                <div class="map-pulse"></div>
+              </div>
+              <div class="map-details-tag">
+                <strong>Aura Roasters Flagship</strong>
+                <span>Tersedia Parkir Luas & Valet</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <div class="logo-text">
+          <span class="brand-name">AURA</span>
+          <span class="brand-tag">COFFEE ROASTERS</span>
+        </div>
+        <p class="footer-bio">
+          Menghidangkan rasa kopi otentik dengan dedikasi tinggi, estetika modern, dan ketulusan bagi setiap cangkir yang Anda nikmati.
+        </p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+          </a>
+          <a href="#" aria-label="Twitter">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Navigasi</h4>
+        <ul>
+          <li><a href="#hero">Beranda</a></li>
+          <li><a href="#about">Tentang Kami</a></li>
+          <li><a href="#menu">Koleksi Menu</a></li>
+          <li><a href="#recommender">Rekomendasi Rasa</a></li>
+          <li><a href="#location">Lokasi & Jam</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links-group">
+        <h4>Pelayanan</h4>
+        <ul>
+          <li><a href="#" onclick="openReserveModal(); return false;">Reservasi Acara & Rapat</a></li>
+          <li><a href="#" onclick="openCart(); return false;">Pesan Online</a></li>
+          <li><a href="#">Biji Kopi Roastery</a></li>
+          <li><a href="#">B2B Wholesale</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-newsletter">
+        <h4>Dapatkan Diskon Spesial</h4>
+        <p>Berlangganan newsletter kami untuk resep seduh mingguan dan info event eksklusif.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Masukkan alamat email Anda" required id="newsletterEmail">
+          <button type="submit" class="btn btn-primary btn-sm">Langganan</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Aura Coffee Roasters. Seluruh hak cipta dilindungi undang-undang.</p>
+      <div class="footer-meta-links">
+        <a href="#">Privasi</a>
+        <a href="#">Ketentuan</a>
+        <a href="#">Kontak Barista</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Slide-in Cart Drawer -->
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Keranjang Pesanan">
+    <div class="cart-header">
+      <div class="cart-header-title">
+        <h3>Pesanan Anda</h3>
+        <span class="cart-badge-count" id="drawerCartCount">0 Menu</span>
+      </div>
+      <button class="close-btn" id="closeCartBtn" aria-label="Tutup Keranjang">&times;</button>
+    </div>
+
+    <div class="cart-body" id="cartItemsList">
+      <!-- Items dynamically populated via JS -->
+      <div class="cart-empty-state">
+        <div class="empty-cup">☕</div>
+        <h4>Keranjang Anda Kosong</h4>
+        <p>Pilih racikan kopi atau kudapan favorit Anda dari menu.</p>
+      </div>
+    </div>
+
+    <div class="cart-footer" id="cartFooter">
+      <div class="cart-summary-line">
+        <span>Subtotal</span>
+        <strong id="cartSubtotal">Rp 0</strong>
+      </div>
+      <div class="cart-summary-line">
+        <span>Pajak Resto (10%)</span>
+        <span id="cartTax">Rp 0</span>
+      </div>
+      <div class="cart-divider"></div>
+      <div class="cart-summary-line total-line">
+        <span>Total Pembayaran</span>
+        <strong id="cartGrandTotal">Rp 0</strong>
+      </div>
+
+      <div class="cart-actions">
+        <button class="btn btn-primary btn-block" id="whatsappCheckoutBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="wa-icon">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          Checkout via WhatsApp
+        </button>
+        <button class="btn btn-text btn-block clear-cart-btn" id="clearCartBtn">
+          Kosongkan Keranjang
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Reservation Modal -->
+  <div class="modal-backdrop" id="reserveModalBackdrop">
+    <div class="modal-card">
+      <button class="modal-close-btn" id="closeReserveModalBtn">&times;</button>
+      <div class="modal-header">
+        <span class="section-badge">RESERVASI MEJA</span>
+        <h3>Amankan Meja Terbaik Anda</h3>
+        <p>Silakan isi detail di bawah, kami akan menyiapkan tempat sebelum kedatangan Anda.</p>
+      </div>
+
+      <form id="reservationForm" class="reserve-form">
+        <div class="form-group">
+          <label for="reserveName">Nama Lengkap</label>
+          <input type="text" id="reserveName" placeholder="Contoh: Budi Santoso" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reservePhone">Nomor WhatsApp</label>
+            <input type="tel" id="reservePhone" placeholder="081234567890" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveGuests">Jumlah Tamu</label>
+            <select id="reserveGuests" required>
+              <option value="1">1 Orang (Solo Work)</option>
+              <option value="2" selected>2 Orang</option>
+              <option value="3-4">3 - 4 Orang</option>
+              <option value="5+">5+ Orang (Group Table)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reserveDate">Tanggal</label>
+            <input type="date" id="reserveDate" required>
+          </div>
+          <div class="form-group">
+            <label for="reserveTime">Jam Kunjungan</label>
+            <select id="reserveTime" required>
+              <option value="09:00">09.00 WIB</option>
+              <option value="11:00">11.00 WIB</option>
+              <option value="13:00">13.00 WIB</option>
+              <option value="15:00" selected>15.00 WIB</option>
+              <option value="17:00">17.00 WIB</option>
+              <option value="19:00">19.00 WIB</option>
+              <option value="20:30">20.30 WIB</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reserveArea">Preferensi Area</label>
+          <div class="area-radio-group">
+            <label class="radio-chip">
+              <input type="radio" name="areaPreference" value="Indoor Non-Smoking" checked>
+              <span>Indoor AC (Non-Smoking)</span>
+            </label>
+            <label class="radio-chip">
+              <input type="radio" name="areaPreference" value="Outdoor Garden">
+              <span>Outdoor Garden</span>
+            </label>
+            <label class="radio-chip">
+              <input type="radio" name="areaPreference" value="Slow Bar Counter">
+              <span>Slow Bar Counter</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="reserveNotes">Catatan Khusus (Opsional)</label>
+          <input type="text" id="reserveNotes" placeholder="Misal: Dekat colokan, butuh high chair, dll.">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block">Konfirmasi Reservasi</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Reservation Success Feedback Modal -->
+  <div class="modal-backdrop" id="successModalBackdrop">
+    <div class="modal-card text-center">
+      <div class="success-icon-wrap">✓</div>
+      <h3>Reservasi Berhasil Dibuat!</h3>
+      <p id="successModalMsg">Meja Anda telah kami catat dalam antrian reservasi.</p>
+      
+      <div class="booking-code-card">
+        <span>Kode Booking Anda:</span>
+        <h4 id="bookingCodeDisplay">AUR-8821</h4>
+      </div>
+
+      <button class="btn btn-primary btn-block" id="closeSuccessModalBtn">Selesai & Tutup</button>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
